@@ -1,0 +1,1014 @@
+/* ==========================================================================
+   Zoé Stores — estilos globais
+   Paleta oficial: off-white #F7F0E5 · champagne #B69A6A · grafite #26231F · rosé nude #D8B8A4
+   Regra de ouro: nenhuma regra neste arquivo posiciona texto, selo, gradiente ou
+   pseudo-elemento sobre uma fotografia. A foto vive sozinha em .card__photo / .hero__photo.
+   ========================================================================== */
+
+:root {
+  --offwhite: #f7f0e5;
+  --champagne: #b69a6a;
+  --graphite: #26231f;
+  --rose: #d8b8a4;
+
+  /* derivados com contraste calculado contra o off-white (>= 4,5:1 para texto) */
+  --gold-text: #6b5630; /* ~6,2:1 */
+  --muted: #5b554d; /* ~6,5:1 */
+  --photo-bg: #ece1d2; /* fundo neutro atrás da foto (só aparece se a proporção diferir) */
+  --tint: rgba(216, 184, 164, 0.2);
+  --line: rgba(38, 35, 31, 0.16);
+
+  --serif: var(--font-serif, "Cormorant Garamond", Georgia, "Times New Roman", serif);
+  --sans: var(--font-sans, "Jost", system-ui, -apple-system, "Segoe UI", sans-serif);
+
+  --gutter: clamp(1.25rem, 5vw, 3rem);
+  --header-h: 4rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--offwhite);
+  color: var(--graphite);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+figure,
+address {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------- acessibilidade ---------- */
+
+:focus-visible {
+  outline: 3px solid var(--gold-text);
+  outline-offset: 3px;
+}
+
+.final-cta :focus-visible,
+.site-footer :focus-visible {
+  outline-color: var(--offwhite);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  background: var(--graphite);
+  color: var(--offwhite);
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ---------- layout base ---------- */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: clamp(4rem, 9vw, 7.5rem);
+}
+
+.section--tint {
+  background: var(--tint);
+}
+
+.section--compact {
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.section__head {
+  max-width: 40rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.section__head--small {
+  margin-bottom: 2rem;
+}
+
+.section__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+}
+
+.section__title--small {
+  font-size: clamp(1.6rem, 3.6vw, 2.2rem);
+}
+
+.section__lead {
+  margin-top: 1rem;
+  color: var(--muted);
+  max-width: 34rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+/* ---------- botões e links ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.85rem 1.6rem;
+  border: 1px solid transparent;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.btn--dark {
+  background: var(--graphite);
+  color: var(--offwhite);
+}
+
+.btn--dark:hover {
+  background: #3b3630;
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--graphite);
+  border-color: var(--graphite);
+}
+
+.btn--outline:hover {
+  background: var(--graphite);
+  color: var(--offwhite);
+}
+
+.btn--light {
+  background: var(--offwhite);
+  color: var(--graphite);
+}
+
+.btn--light:hover {
+  background: var(--rose);
+}
+
+.text-link {
+  display: inline-block;
+  padding-block: 0.3rem;
+  text-decoration: underline;
+  text-decoration-color: var(--champagne);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.35em;
+  transition: color 0.2s ease;
+}
+
+.text-link:hover {
+  color: var(--gold-text);
+}
+
+/* ---------- cabeçalho ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(247, 240, 229, 0.94);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-h);
+}
+
+.brand {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.nav-toggle {
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  background: transparent;
+  color: var(--graphite);
+  border: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav {
+  display: none;
+}
+
+.nav--open {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.25rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1.25rem var(--gutter) 1.75rem;
+  background: var(--offwhite);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav__link {
+  display: block;
+  padding: 0.6rem 0;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--gold-text);
+  text-decoration: underline;
+  text-decoration-color: var(--champagne);
+  text-underline-offset: 0.35em;
+}
+
+@media (min-width: 960px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav,
+  .nav--open {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.25rem;
+    position: static;
+    padding: 0;
+    background: transparent;
+    border: 0;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    gap: 1.75rem;
+  }
+
+  .nav__link {
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+  }
+
+  .nav__cta {
+    min-height: 2.75rem;
+    padding: 0.6rem 1.25rem;
+  }
+}
+
+/* ---------- animação discreta (só no hero) ---------- */
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.rise--1 {
+  animation-delay: 0.05s;
+}
+.rise--2 {
+  animation-delay: 0.15s;
+}
+.rise--3 {
+  animation-delay: 0.28s;
+}
+.rise--4 {
+  animation-delay: 0.4s;
+}
+
+/* a foto do hero entra só com fade, sem deslocamento */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: fade 1.1s ease-out 0.2s both;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  padding-block: clamp(2.5rem, 6vw, 5rem) clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.hero__grid {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4rem);
+  align-items: center;
+}
+
+.hero__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.9rem, 9.5vw, 5.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+}
+
+.hero__lead {
+  margin-top: 1.5rem;
+  max-width: 28rem;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.hero__actions {
+  margin-top: 2.25rem;
+}
+
+.hero__media {
+  position: relative;
+  width: 100%;
+  max-width: 28.5rem;
+  margin-inline: auto;
+}
+
+/* moldura decorativa ATRÁS da foto (nunca por cima) */
+.hero__frame {
+  position: absolute;
+  inset: 0.9rem -0.9rem -0.9rem 0.9rem;
+  border: 1px solid var(--champagne);
+  z-index: 0;
+}
+
+.hero__photo {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 4 / 5;
+  background: var(--photo-bg);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.hero__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 900px) {
+  .hero__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+
+  .hero__media {
+    margin-inline: 0 auto;
+  }
+
+  .hero__frame {
+    inset: 1.25rem -1.25rem -1.25rem 1.25rem;
+  }
+}
+
+/* ---------- grades e cartões de produto ---------- */
+
+.grid {
+  display: grid;
+  gap: 3rem 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 560px) {
+  .grid--featured {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.25rem 1.75rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid--featured {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 2.25rem;
+  }
+}
+
+.grid--clutches {
+  max-width: 46rem;
+}
+
+@media (min-width: 480px) {
+  .grid--clutches {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* área da FOTO: contém somente a imagem */
+.card__photo {
+  aspect-ratio: 4 / 5;
+  background: var(--photo-bg);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* área de INFORMAÇÕES: bloco independente, abaixo da foto */
+.card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-top: 1.1rem;
+}
+
+.card__eyebrow {
+  margin-bottom: 0.3rem;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.card__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.55rem;
+  line-height: 1.18;
+}
+
+/* os nomes do catálogo começam em minúscula depois do traço; capitaliza só a exibição */
+.card__title::first-letter {
+  text-transform: uppercase;
+}
+
+.card__desc {
+  margin: 0.6rem 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* margin-top:auto alinha preço e botão no pé do cartão, mesmo com títulos de alturas diferentes */
+.card__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  margin: auto 0 1.15rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+.card__price-label {
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card__price-value {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.card__cta {
+  width: 100%;
+}
+
+.card--compact .card__title {
+  font-size: 1.3rem;
+}
+
+.card--compact .card__price-value {
+  font-size: 1.4rem;
+}
+
+.price-note,
+.fineprint {
+  margin-top: 3rem;
+  max-width: 40rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- filtros (Explore) ---------- */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.chip {
+  min-height: 2.75rem;
+  padding: 0 1.15rem;
+  background: transparent;
+  color: var(--graphite);
+  border: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.chip:hover {
+  border-color: var(--graphite);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--graphite);
+  border-color: var(--graphite);
+  color: var(--offwhite);
+}
+
+.explore__status {
+  margin-bottom: 2.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- ocasiões ---------- */
+
+.occasions {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.occasion {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--champagne);
+}
+
+.occasion__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.9rem;
+  line-height: 1.15;
+}
+
+.occasion__text {
+  margin: 0.75rem 0 1rem;
+  color: var(--muted);
+}
+
+@media (min-width: 800px) {
+  .occasions {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* ---------- institucional ---------- */
+
+.about {
+  display: grid;
+  gap: 2rem;
+}
+
+.about__text {
+  display: grid;
+  gap: 1.1rem;
+  max-width: 36rem;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 800px) {
+  .about {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+}
+
+/* ---------- como funciona ---------- */
+
+.steps {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.step__num {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--serif);
+  font-size: 3.2rem;
+  line-height: 1;
+  color: var(--champagne);
+}
+
+.step__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 1.15;
+}
+
+.step__text {
+  margin-top: 0.6rem;
+  color: var(--muted);
+}
+
+@media (min-width: 800px) {
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* ---------- contato ---------- */
+
+.contact {
+  display: grid;
+  gap: 2.25rem 2rem;
+}
+
+.contact__label {
+  margin-bottom: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.contact__block p {
+  overflow-wrap: anywhere;
+}
+
+/* link dentro de parágrafo: sem o respiro vertical extra, para alinhar com os demais textos */
+.contact__block p .text-link {
+  padding-block: 0;
+}
+
+@media (min-width: 560px) {
+  .contact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .contact {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ---------- CTA final e rodapé ---------- */
+
+.final-cta {
+  padding-block: clamp(4rem, 9vw, 6.5rem);
+  background: var(--graphite);
+  color: var(--offwhite);
+  text-align: center;
+}
+
+.final-cta__inner {
+  display: grid;
+  justify-items: center;
+  gap: 1.25rem;
+}
+
+.final-cta__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  line-height: 1.08;
+}
+
+.final-cta__text {
+  max-width: 30rem;
+  margin-bottom: 0.75rem;
+  color: #d9cfc0;
+}
+
+.site-footer {
+  padding-block: 3rem 2rem;
+  background: #1c1a17;
+  color: var(--offwhite);
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: 2rem;
+}
+
+.site-footer__brand {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.site-footer__muted {
+  margin-top: 0.25rem;
+  color: #bdb3a5;
+}
+
+.site-footer__list {
+  display: grid;
+  gap: 0.6rem;
+  color: #d9cfc0;
+}
+
+.footer-link {
+  text-decoration: underline;
+  text-decoration-color: var(--champagne);
+  text-underline-offset: 0.3em;
+}
+
+.site-footer__legal {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(247, 240, 229, 0.16);
+  font-size: 0.85rem;
+  color: #bdb3a5;
+}
+
+@media (min-width: 800px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+/* ---------- revelar ao rolar (components/Reveal.tsx) ---------- */
+/* O conteúdo é visível por padrão. Só o que está abaixo da dobra é escondido pelo JS
+   (data-reveal="hidden"). Apenas opacity e transform: sem CLS. */
+
+.reveal[data-reveal="hidden"] {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.reveal[data-reveal="shown"] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms),
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms);
+}
+
+/* o Reveal que envolve um cartão precisa preencher a célula para manter preço e botão alinhados */
+.reveal > .card {
+  height: 100%;
+}
+
+/* troca de tonalidade: a nova grade entra com um fade curto (só opacidade) */
+@keyframes swap-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.grid--swap {
+  animation: swap-in 0.45s ease-out both;
+}
+
+/* ---------- transições discretas ---------- */
+
+.btn {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.btn:active,
+.chip:active {
+  transform: translateY(1px);
+}
+
+.card__photo {
+  transition: box-shadow 0.4s ease;
+}
+
+.card__title {
+  transition: color 0.25s ease;
+}
+
+/* Só em dispositivos com mouse. A sombra fica FORA da foto; a imagem não é alterada. */
+@media (hover: hover) {
+  .card:hover .card__photo,
+  .card:focus-within .card__photo {
+    box-shadow: 0 18px 32px -22px rgba(38, 35, 31, 0.55);
+  }
+
+  .card:hover .card__title {
+    color: var(--gold-text);
+  }
+}
+
+/* ---------- visite nossa boutique ---------- */
+
+.visit {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.visit__address {
+  display: grid;
+  gap: 0.15rem;
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+}
+
+.visit__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.visit__note {
+  margin-top: 1.5rem;
+  max-width: 28rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.visit__map {
+  min-width: 0;
+}
+
+/* proporção fixa: o iframe lazy não desloca o layout ao carregar */
+/* sem min-height: combinado com aspect-ratio ele força largura mínima e estoura no celular */
+.map-frame {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--photo-bg);
+  border: 1px solid var(--champagne);
+  overflow: hidden;
+}
+
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (min-width: 560px) {
+  .map-frame {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (min-width: 900px) {
+  .visit {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 4rem;
+  }
+
+  .map-frame {
+    aspect-ratio: 5 / 4;
+  }
+}
+
+/* ---------- movimento reduzido ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal[data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

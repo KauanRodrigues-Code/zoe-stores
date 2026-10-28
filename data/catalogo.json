@@ -1,0 +1,164 @@
+[
+  {
+    "id": "zoe-01",
+    "categoria": "vestido",
+    "imagem": "01_azul_serenity_capa_longa.jpg",
+    "nome": "Azul Serenity — vestido de musseline com capa longa",
+    "descricao": "Azul serenity; vestido longo; decote estruturado e capa longa.",
+    "valor_locacao": "R$ 399,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-02",
+    "categoria": "vestido",
+    "imagem": "02_azul_serenity_babados_e_echarpe.jpg",
+    "nome": "Azul Serenity — busto reto, babados e echarpe",
+    "descricao": "Azul serenity; busto reto; saia com babados; acompanha echarpe.",
+    "valor_locacao": "R$ 499,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-03",
+    "categoria": "vestido",
+    "imagem": "03_azul_serenity_tomara_que_caia_fenda.jpg",
+    "nome": "Azul Serenity — tomara que caia com fenda",
+    "descricao": "Azul serenity; modelo tomara que caia; saia longa com fenda.",
+    "valor_locacao": "R$ 399,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-04",
+    "categoria": "vestido",
+    "imagem": "04_vermelho_zibeline_babados.jpg",
+    "nome": "Vermelho — vestido de zibeline com babados",
+    "descricao": "Vermelho intenso; tecido zibeline; saia com babados em camadas.",
+    "valor_locacao": "R$ 499,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-05",
+    "categoria": "vestido",
+    "imagem": "05_vermelho_ombro_princesa.jpg",
+    "nome": "Vermelho — ombro princesa com alças em zibeline",
+    "descricao": "Vermelho; decote ombro princesa com alças; saia longa e fenda.",
+    "valor_locacao": "R$ 399,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-06",
+    "categoria": "vestido",
+    "imagem": "06_rosa_pink_decote_v.jpg",
+    "nome": "Pink — vestido com decote em V",
+    "descricao": "Pink/magenta; decote em V; modelagem ajustada e fenda.",
+    "valor_locacao": "R$ 399,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-07",
+    "categoria": "vestido",
+    "imagem": "07_rose_paeta_decote_borboleta.jpg",
+    "nome": "Rosé — vestido de paetá com decote borboleta",
+    "descricao": "Rosé; paetá; decote borboleta; saia longa com fenda.",
+    "valor_locacao": "R$ 399,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-08",
+    "categoria": "vestido",
+    "imagem": "08_rose_musseline_capa_longa.jpg",
+    "nome": "Rosé claro — vestido de musseline com capa longa",
+    "descricao": "Rosé claro; vestido longo de musseline; capa/mangas longas.",
+    "valor_locacao": "R$ 399,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-09",
+    "categoria": "vestido",
+    "imagem": "09_verde_menta_zibeline_fenda.jpg",
+    "nome": "Verde Menta — zibeline tomara que caia com fenda",
+    "descricao": "Verde menta; zibeline; tomara que caia; faixa estruturada no busto e fenda.",
+    "valor_locacao": "R$ 499,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-10",
+    "categoria": "vestido",
+    "imagem": "10_verde_oliva_lurex_fenda.jpg",
+    "nome": "Verde Oliva — vestido de lurex com alças e fenda",
+    "descricao": "Verde oliva; tecido lurex com brilho; alças; saia longa com fenda.",
+    "valor_locacao": "R$ 399,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-11",
+    "categoria": "vestido",
+    "imagem": "11_marrom_zibeline_ombro_a_ombro.jpg",
+    "nome": "Marrom — vestido de zibeline ombro a ombro",
+    "descricao": "Marrom; zibeline; decote ombro a ombro; silhueta sereia.",
+    "valor_locacao": "R$ 499,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-12",
+    "categoria": "vestido",
+    "imagem": "12_amarelo_manteiga_frente_unica.jpg",
+    "nome": "Amarelo Manteiga — frente única drapeado",
+    "descricao": "Amarelo manteiga; frente única; drapeado e costas abertas.",
+    "valor_locacao": "R$ 499,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-13",
+    "categoria": "vestido",
+    "imagem": "13_amarelo_zibeline_detalhe_floral.jpg",
+    "nome": "Amarelo — vestido de zibeline com detalhe floral",
+    "descricao": "Amarelo claro/dourado suave; zibeline; detalhe floral no ombro e fenda.",
+    "valor_locacao": "R$ 399,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-14",
+    "categoria": "vestido",
+    "imagem": "14_lavanda_zibeline_tomara_que_caia.jpg",
+    "nome": "Lavanda — vestido de zibeline tomara que caia",
+    "descricao": "Lavanda; zibeline acetinado; tomara que caia; saia longa com fenda.",
+    "valor_locacao": "R$ 399,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-15",
+    "categoria": "vestido",
+    "imagem": "15_lavanda_tule_brilhos_e_camadas.jpg",
+    "nome": "Lavanda — tule com brilhos e capas laterais",
+    "descricao": "Lavanda; tule com brilho; capas laterais longas; saia com fenda.",
+    "valor_locacao": "R$ 399,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-16",
+    "categoria": "vestido",
+    "imagem": "16_preto_sem_alca_com_echarpe.jpg",
+    "nome": "Preto — vestido sem alças com decote coração e echarpe",
+    "descricao": "Preto; sem alças; decote coração drapeado; acompanha echarpe do mesmo tecido.",
+    "valor_locacao": "R$ 499,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-17",
+    "categoria": "clutch",
+    "imagem": "17_clutch_furta_cor_azul_verde.jpg",
+    "nome": "Clutch furta-cor azul e verde",
+    "descricao": "Clutch de paetês furta-cor em tons de azul e verde; acompanha alça.",
+    "valor_locacao": "R$ 70,00",
+    "valor_confirmar_antes_de_publicar": true
+  },
+  {
+    "id": "zoe-18",
+    "categoria": "clutch",
+    "imagem": "18_clutch_fucsia_metalizada.jpg",
+    "nome": "Clutch fúcsia metalizada",
+    "descricao": "Clutch fúcsia metalizada; acompanha alcinha.",
+    "valor_locacao": "R$ 70,00",
+    "valor_confirmar_antes_de_publicar": true
+  }
+]
